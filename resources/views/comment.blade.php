@@ -25,8 +25,8 @@
             </ul>
         </div>
     @endif
-
-    <form method="post" action="comment/check">
+        <h2 style="text-align: center">Оставьте свой комментарий</h2>
+    <form method="post" action="comment/check" class="form-box">
         @csrf
         <input type="email" name="email" id="email" placeholder="Введите email" class="form-control"><br>
         <input type="text" name="subject" id="subject" placeholder="Введите отзыв" class="form-control"><br>

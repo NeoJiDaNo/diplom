@@ -18,7 +18,7 @@
 @section('main_content')
 
 
-    <form class="form-box" method="post" action="admin/upload" enctype="multipart/form-data">
+    <form class="form-box" method="post" action="admin/upload" enctype="multipart/form-data" style="margin-bottom: 350px">
         @csrf
         <h2>Добавить запись в меню</h2>
         @if($errors->any())

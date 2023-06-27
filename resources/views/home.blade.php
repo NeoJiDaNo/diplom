@@ -23,7 +23,7 @@
                     <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Доставка еды по всему миру</h1>
                     <p class="lead fw-bold" style="font-size: 22px">Наша компания специализируется на доставке различных продуктов и готовой еды.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Заказать</button>
+                        <a href="#shops__card" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Заказать</a>
 
                     </div>
                 </div>
@@ -74,7 +74,7 @@
     </section>
     <!-- /.shops__slider -->
 
-    <section class="shops__card">
+    <section class="shops__card" id="shops__card">
         <div class="container px-4 py-5" id="custom-cards">
             <h2 class="pb-2 border-bottom">Доступная доставка</h2>
 

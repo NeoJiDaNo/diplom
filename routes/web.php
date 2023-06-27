@@ -36,13 +36,13 @@ Route::get('pere', 'uploadController@pere');
 Route::get('pyat', 'uploadController@pyat');
 
 Route::name('reg.')->group(function (){
-    Route::view('/', 'home')->middleware('auth')->name('home');
+    Route::view('/', 'home')->name('home');
 
     Route::get('/login', function (){
-       if(Auth::check()){
-           return redirect(route('reg.home'));
-       }
-       return view('login');
+        if(Auth::check()){
+            return redirect(route('reg.home'));
+        }
+        return view('login');
     })->name('login');
 
     Route::post('login', [\App\Http\Controllers\loginController::class, 'login']);

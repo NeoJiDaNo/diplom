@@ -25,12 +25,8 @@
                 <li><a href="/" class="nav-link px-2  @yield('main-a')">Главная</a></li>
                 <li><a href="/comment" class="nav-link px-2  @yield('comment-a')">Отзывы</a></li>
                 <li><a href="/about" class="nav-link px-2  @yield('about-a')">О нас</a></li>
-                <li><a href="#" class="nav-link px-2  @yield('contacts-a')">Контакты</a></li>
             </ul>
-
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Search..." aria-label="Search">
-            </form>
+            
 
             @if(Auth::check())
                 <div class="dropdown">
@@ -39,9 +35,6 @@
                         <strong>{{ Auth::user()->login }}</strong>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/logout">Sign out</a></li>
                     </ul>
                 </div>
@@ -78,18 +71,8 @@
                         Главная
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-link @yield('sidebarAction')">
-                        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                        Акции
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link @yield('sidebarDelivery')">
-                        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                        Все магазины
-                    </a>
-                </li>
+
+
                 <li>
                     <a href="/comment" class="nav-link @yield('sidebarComment')">
                         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
@@ -102,12 +85,7 @@
                         О нас
                     </a>
                 </li>
-                <li>
-                    <a href="#" class="nav-link @yield('sidebarContact')">
-                        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                        Контакты
-                    </a>
-                </li>
+
                 @auth
                     @if(Auth::user()->isAdmin())
                         <li>

@@ -21,19 +21,14 @@ class uploadController extends Controller
             'company' => 'required',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ]);
-
         $path = $request->file('image')->store('products', 'public');
-
         $review = new products;
-
         $review->path = $path;
         $review->name = $request->input('name');
         $review->description = $request->input('description');
         $review->price = $request->input('price');
         $review->company = $request->input('company');
-
         $review->save();
-
         return redirect('admin')->with('status', 'Изображение было загружено');
 
     }
